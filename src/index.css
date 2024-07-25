@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+html {
+  background-color: #7091E6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+}
+
+/******* Navigation Bar *******/
+
+nav {
+  position: relative;
+  top: 30px;
+  font-family: "Rubik";
+  margin-bottom: 40px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+  margin-left: 0;
+  transition-duration: 0.2s;
+}
+
+
+nav ul li:first-child:hover {
+  filter: invert(95%);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #3D52A0;
+  transition-duration: 0.2s;
+}
+
+nav ul li a:hover {
+  color: #EDE8F5;
+}
+
+nav ul li a:active {
+  color: #ADBBDA;
+}
+
+/******* Intro Section *******/
+
+.intro {
+  margin-top: 60px;
+  display: flex;
+  width: 100%;
+  height: 250px;
+}
+
+.intro-name {
+  width: 66%;
+  animation-name: "intro-name";
+}
+
+.intro-name h1 {
+  font-family: "Rubik";
+  font-size: 3rem;
+  opacity: 0;
+}
+
+.white-box {
+  height: 5px;
+  width: 30px;
+  margin-left: 3px;
+  background-color: #EDE8F5;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.intro-name img {
+  width: 20px;
+  height: 20px;
+  transition-duration: 0.2s;
+}
+
+.intro-name img:hover {
+  transform: scale(1.5);
+  filter: invert(95%);
+}
+
+.intro-name ul {
+  height: 30px;
+  margin-top: 45px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.intro-name ul li {
+  margin-right: 15px;
+}
+
+.intro-name ul li:hover .intro-name img {
+  width: 30px;
+  height: 30px;
+}
+
+.intro-name h1, .white-box, .intro-name ul {
+  animation-name: slideRight;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.intro-description {
+  width: 34%;
+  font-family: "Rubik"
+}
+
+.intro-description h4 {
+  font-family: "Poppins";
+  font-size: 10px;
+  color: #ADBBDA;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+.intro-description h5 {
+  font-size: 16px;
+  color: #000000;
+  margin: 20px 0 15px 0;
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+
+.intro-description h6 {
+  font-size: 10px;
+  font-weight: 400;
+  color: #EDE8F5;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.intro-description h4, .intro-description h5, .intro-description h6 {
+  animation-name: slideUp;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.works {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.work {
+  width: 70%;
+  height: 200px;
+  margin-bottom: 20px;
+  border: 1px solid #EDE8F5;
+}
